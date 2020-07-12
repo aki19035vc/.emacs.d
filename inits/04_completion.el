@@ -4,6 +4,7 @@
   :delight
   :hook (after-init . ivy-mode))
 
+
 (use-package swiper
   :ensure t
   :defer t
@@ -38,21 +39,18 @@
 		     (lambda (_caller)
 		       (/ (frame-height) 8))))
   (setq ivy-initial-inputs-alist nil)
-  (defvar ivy-format-function 'ivy-format-function-arrow)
+
+  (use-package counsel-projectile
+    :ensure t
+    :init
+    (counsel-projectile-mode t))
   )
-
-
-(use-package counsel-projectile
-  :ensure t
-  :defer t
-  :hook (after-init . (projectile-mode t)))
-
 
 (use-package all-the-icons-ivy-rich
   :ensure t
-  :init (all-the-icons-ivy-rich-mode t))
-
-
-(use-package ivy-rich
-  :ensure t
-  :init (ivy-rich-mode t))
+  :hook (ivy-mode . all-the-icons-ivy-rich-mode)
+  :config
+  (use-package ivy-rich
+    :ensure t
+    :hook (all-the-icons-ivy-rich-mode . ivy-rich-mode))
+  )
