@@ -1,0 +1,61 @@
+
+;; ----- smex-history -----
+(
+ lsp-ui-sideline-mode
+ lsp-ui-peek-find-implementation
+ lsp-ui-peek-find-references
+ lsp-ui-peek-find-definitions
+ describe-variable
+ enh-ruby-mode
+ flycheck-mode
+ highlight-indent-guides-mode
+ describe-mode
+ lsp-ivy-workspace-symbol
+ counsel-rg
+ company-diag
+ xref-find-references
+ xref-find-apropos
+ projectile-rails-find-model
+ projectile-rails-find-controller
+ counsel-ag
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+ erc
+ ert
+ eww
+ ftp
+ gdb
+ irc
+ jdb
+ lsp
+ man
+ mpc
+ pdb
+ pwd
+ rsh
+)
+
+;; ----- smex-data -----
+(
+ (counsel-rg . 9)
+ (counsel-ag . 1)
+ (eglot-shutdown . 16)
+ (projectile-rails-find-controller . 2)
+ (projectile-rails-find-model . 1)
+ (xref-find-references . 4)
+ (xref-find-apropos . 2)
+ (company-diag . 2)
+ (describe-variable . 50)
+ (lsp-ui-peek-find-definitions . 5)
+ (lsp-ui-peek-find-references . 9)
+ (describe-mode . 3)
+ (lsp-ivy-workspace-symbol . 4)
+ (flycheck-mode . 4)
+ (highlight-indent-guides-mode . 1)
+ (enh-ruby-mode . 1)
+ (lsp-ui-peek-find-implementation . 1)
+ (lsp-ui-sideline-mode . 1)
+)

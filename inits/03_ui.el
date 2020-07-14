@@ -34,6 +34,8 @@
 ;; theme
 (use-package spacemacs-common
   :ensure spacemacs-theme
+  ;; :custom
+  ;; (spacemacs-theme-custom-colors (cursor . "#ffa500"))
   :config
   (custom-set-variables '(spacemacs-theme-custom-colors
                           '((cursor . "#ffa500"))))

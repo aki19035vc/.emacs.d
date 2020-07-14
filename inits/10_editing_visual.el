@@ -30,12 +30,17 @@
   :defer t
   :delight
   :hook
-  (prog-mode . highlight-indent-guides-mode)
+  ((prog-mode
+    yaml-mode
+    org-mode
+    ) . highlight-indent-guides-mode)
   :commands (highlight-indent-guides-mode)
   :custom
   (highlight-indent-guides-auto-enabled t)
   (highlight-indent-guides-responsive t)
-  (highlight-indent-guides-method 'character))
+  (highlight-indent-guides-method 'character)
+  :config
+  )
 
 ;; 括弧がレインボーになる
 (use-package rainbow-delimiters

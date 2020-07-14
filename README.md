@@ -5,6 +5,17 @@
 mac用のemacsです。
 通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう。
 
+## その他必要なツール
+### ripgrep(音速grep)
+`brew install ripgrep`
+
+### language server
+#### Ruby
+bundler経由で呼び出されるため、bundler必須
+`gem install bunlder`
+`bundle install solargraph`
+
+
 ## 設定
 ファイルの分け方はspacemacsを参考にしています
 
@@ -116,7 +127,7 @@ mac用のemacsです。
 フレームワーク
 - vue.js
 
-#### その他
+#### misc
 - markdown
 - org
 - yaml
@@ -125,6 +136,8 @@ mac用のemacsです。
 - json
 - sql
 - docker
+- gitignore
+
 
 ### キーバインド
 - 画面の最大化(maximize-window) / 画面構成を戻す(winner-undo)

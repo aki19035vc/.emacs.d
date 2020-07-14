@@ -24,12 +24,18 @@
   ("M-x" . counsel-M-x)
   ("M-y" . counsel-yank-pop)
   :custom
-  ;; (ivy-format-function 'ivy-format-function-arrow)
   (enable-recursive-minibuffers t)
   (ivy-use-virtual-buffers t)
   (ivy-count-format "(%d/%d) ")
   (counsel-yank-pop-separator "\n------------------\n")
   :config
+  (use-package smex
+    :ensure t
+    :custom
+    (smex-history-length 35)
+    (smex-completion-method 'ivy)
+    )
+
   (setq ivy-height-alist
 	'((t
 	   lambda (_caller)
