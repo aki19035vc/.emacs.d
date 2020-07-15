@@ -1,22 +1,25 @@
 
 ;; ----- smex-history -----
 (
- lsp-ui-sideline-mode
- lsp-ui-peek-find-implementation
- lsp-ui-peek-find-references
- lsp-ui-peek-find-definitions
- describe-variable
- enh-ruby-mode
- flycheck-mode
+ describe-key
+ yajade-newline-and-indent
  highlight-indent-guides-mode
+ describe-variable
+ byte-compile-file
+ vue-mode
+ kill-buffer
+ package-list-packages
+ jade-mode
  describe-mode
- lsp-ivy-workspace-symbol
+ list-packages
+ package-install
+ web-mode
+ beacon-mode
  counsel-rg
+ eval-buffer
  company-diag
  xref-find-references
  xref-find-apropos
- projectile-rails-find-model
- projectile-rails-find-controller
  counsel-ag
  cd
  5x5
@@ -33,9 +36,6 @@
  lsp
  man
  mpc
- pdb
- pwd
- rsh
 )
 
 ;; ----- smex-data -----
@@ -48,14 +48,20 @@
  (xref-find-references . 4)
  (xref-find-apropos . 2)
  (company-diag . 2)
- (describe-variable . 50)
- (lsp-ui-peek-find-definitions . 5)
- (lsp-ui-peek-find-references . 9)
- (describe-mode . 3)
- (lsp-ivy-workspace-symbol . 4)
- (flycheck-mode . 4)
- (highlight-indent-guides-mode . 1)
- (enh-ruby-mode . 1)
- (lsp-ui-peek-find-implementation . 1)
- (lsp-ui-sideline-mode . 1)
+ (describe-variable . 8)
+ (eval-buffer . 1)
+ (beacon-mode . 3)
+ (web-mode . 1)
+ (package-install . 3)
+ (list-packages . 1)
+ (mmm-mode . 1)
+ (kill-buffer . 9)
+ (describe-mode . 1)
+ (vue-mode . 6)
+ (package-list-packages . 2)
+ (describe-key . 13)
+ (jade-mode . 1)
+ (byte-compile-file . 1)
+ (highlight-indent-guides-mode . 4)
+ (yajade-newline-and-indent . 1)
 )

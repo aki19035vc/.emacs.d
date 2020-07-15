@@ -35,3 +35,6 @@
  ("C-w m" . maximize-window)
  ("C-w u" . winner-undo)
  ("C-w r" . winner-redo))
+
+;; よくわからんやつを消す
+(define-key override-global-map (kbd "C-M-i") nil)

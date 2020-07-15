@@ -33,6 +33,7 @@
   ((prog-mode
     yaml-mode
     org-mode
+    vue-mode
     ) . highlight-indent-guides-mode)
   :commands (highlight-indent-guides-mode)
   :custom

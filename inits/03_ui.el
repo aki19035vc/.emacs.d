@@ -57,3 +57,11 @@
   (set-face-attribute 'mode-line-inactive nil :family "Source Code Pro" :height 130)
   (line-number-mode 0)
   (column-number-mode 0))
+
+
+;; カーソル行をびこーん
+(use-package beacon
+  :ensure t
+  :custom
+  (beacon-color "magenta")
+  :hook (after-init . beacon-mode))

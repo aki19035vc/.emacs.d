@@ -2,16 +2,22 @@
 ## Emacsのインストール
 ### Emacs Mac Port (EMP)
 [https://github.com/railwaycat/homebrew-emacsmacport]
-mac用のemacsです。
-通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう。
+- nmac用のemacsです。
+- 通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう
 
-## その他必要なツール
+## その他必要なモノ
 ### ripgrep(音速grep)
 `brew install ripgrep`
 
+### yajade [github](https://github.com/kuanyui/yajade-mode.el)
+- とある方がjade-modeをmmm-modeに対応させていたので使わせて頂いております
+`git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github`
+
 ### language server
 #### Ruby
-bundler経由で呼び出されるため、bundler必須
+- bundler経由で呼び出されるため、bundler必須
+- solargraphはrubocopでのコードチェックをしてくれる
+  - lsp-modeではflychecckのチェッカーにrubocopを指定して起動される。便利
 `gem install bunlder`
 `bundle install solargraph`
 
@@ -39,17 +45,15 @@ bundler経由で呼び出されるため、bundler必須
 
 ### completion
 - ivy
-- ivy-rich (all-the-icons)
-- consel (find-file, kill-ring)
 - swiper
-
-[その他]
-- helm :: 以前まで使っていたやつ。こっちもいい。
-- swoop
+- consel (find-file, kill-ring)
+- ivy-rich (all-the-icons)
 
 
 ### auto-complete
 - company
+- company-box :: アイコンを設定してくれる
+- company-posframe :: companyをposframeで表示してくる
 
 ### ui
 - メニューバー非表示
@@ -61,17 +65,18 @@ bundler経由で呼び出されるため、bundler必須
 - spacemacs-theme
 - doom-modeline
 
-[まだ]
+[wip]
 - hide-mode-line (不要なモードラインを消す。neotreeなど)
 - neotree
 
 ### lsp
-
+- lsp-mode
 
 ### better-default
 - mwim :: C-a/C-eをより使いやすくする
-- unfill :: M-q の拡張 (文章を適切な位置で改行/元に戻す)
 
+[todo]
+- unfill :: M-q の拡張 (文章を適切な位置で改行/元に戻す)
 
 ### editing
 [パッケージ]
@@ -80,7 +85,7 @@ bundler経由で呼び出されるため、bundler必須
 - smartparens :: 範囲選択後、任意の括弧の先頭文字を入力すると、前後に括弧を挿入する機能
 - undo-tree :: redoが使えるようになる。それ以外の機能はおまけ
 
-[要検討]
+[todo]
 - yasnipet
 - 矩形編集
 
@@ -106,16 +111,16 @@ bundler経由で呼び出されるため、bundler必須
 - volatile-highlights :: yank(貼り付け)やundoした時にハイライトしてくれる
 - white-space
 
-[要検討]
+[todo]
 - column-enforce-mode :: 長い行を知らせてくれる
 
 ### lang
-#### プログラミング
-- ruby (enf-ruby)
+- ruby
+
+[todo]
 - python
-- elisp
+- shel-script
 - shell-script
-- e-lisp
 
 フレームワーク
 - ruby-on-rails
@@ -128,15 +133,18 @@ bundler経由で呼び出されるため、bundler必須
 - vue.js
 
 #### misc
+- yaml
+- git
+- json
+- docker
+
+[todo]
 - markdown
 - org
-- yaml
 - xml (まだ入れてない)
 - csv
-- json
 - sql
-- docker
-- gitignore
+
 
 
 ### キーバインド
