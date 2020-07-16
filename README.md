@@ -6,6 +6,9 @@
 - 通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう
 
 ## その他必要なモノ
+### font
+`brew cask install font-source-code-pro`
+
 ### ripgrep(音速grep)
 `brew install ripgrep`
 
@@ -18,8 +21,8 @@
 - bundler経由で呼び出されるため、bundler必須
 - solargraphはrubocopでのコードチェックをしてくれる
   - lsp-modeではflychecckのチェッカーにrubocopを指定して起動される。便利
-`gem install bunlder`
-`bundle install solargraph`
+- `gem install bunlder`
+- `bundle install solargraph`
 
 
 ## 設定
