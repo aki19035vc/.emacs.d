@@ -11,7 +11,7 @@
 
 ### yajade [github](https://github.com/kuanyui/yajade-mode.el)
 - とある方がjade-modeをmmm-modeに対応させていたので使わせて頂いております
-`git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github`
+- `git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github/yajade-mode`
 
 ### language server
 #### Ruby
