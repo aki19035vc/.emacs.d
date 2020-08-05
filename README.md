@@ -16,7 +16,7 @@
 - とある方がjade-modeをmmm-modeに対応させていたので使わせて頂いております
 - `git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github/yajade-mode`
 
-### language server
+### language
 #### Ruby
 - bundler経由で呼び出されるため、bundler必須
 - solargraphはrubocopでのコードチェックをしてくれる
@@ -24,6 +24,9 @@
 - `gem install bunlder`
 - `bundle install solargraph`
 
+#### javascript
+- 開発ディレクトリのeslintを使うためにeslint-cliをインストール
+- `yarn global add eslint-cli`
 
 ## 設定
 ファイルの分け方はspacemacsを参考にしています

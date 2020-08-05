@@ -8,6 +8,6 @@
 ;;   :config
 ;;   (set-face-background 'mmm-default-submode-face nil))
 
-(use-package jade-mode
-  :ensure t
-  :defer t)
+;; (use-package jade-mode
+;;   :ensure t
+;;   :defer t)

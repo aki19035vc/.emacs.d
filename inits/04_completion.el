@@ -2,7 +2,9 @@
   :ensure t
   :defer t
   :delight
-  :hook (after-init . ivy-mode))
+  :hook
+  (after-init . ivy-mode)
+  )
 
 
 (use-package swiper
@@ -48,6 +50,8 @@
 
   (use-package counsel-projectile
     :ensure t
+    :custom
+    (projectile-completion-system 'ivy)
     :init
     (counsel-projectile-mode t))
   )

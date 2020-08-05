@@ -5,17 +5,20 @@
   (after-init . global-company-mode)
   :bind
   (:map company-active-map
-	("C-n" . company-select-next)
-	("C-p" . company-select-previous)
-	("<tab>" . company-complete-common-or-cycle)
-	("C-h" . nil))
+        ("C-n" . company-select-next)
+        ("C-p" . company-select-previous)
+        ("<tab>" . company-complete-common-or-cycle)
+        ("C-h" . nil))
   :custom
   (company-idle-delay 0)
-  (company-minimum-prefix-length 1)
+  (company-minimum-prefix-length 2)
   (company-transformers '(company-sort-by-backend-importance))
+  (company-dabbrev-downcase nil) ;; 保管時に大文字小文字を区別するようにする(デフォルトだと区別されない)
+  (company-dabbrev-char-regexp "\\(\\sw\\|\\s_\\|_\\|-\\)") ; -や_などを含む語句も補完
   :config
   ;; company-backendsは、本当に使いたいものの要素とは別に、リストの要素にcompany-capfを入れておかないとlspで上書きされる
-  (setq company-backends '((company-files company-dabbrev company-capf) company-capf))
+  (setq company-backends '((company-files company-dabbrev company-capf company-css)
+                           company-capf))
   (use-package company-posframe
     :ensure t
     :hook (company-mode . company-posframe-mode)

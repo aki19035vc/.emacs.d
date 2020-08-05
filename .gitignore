@@ -9,3 +9,4 @@ transient
 projectile-bookmarks.eld
 custom.el
 .lsp-session-v1
+.tern-config

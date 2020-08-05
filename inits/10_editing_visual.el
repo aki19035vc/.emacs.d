@@ -67,12 +67,14 @@
 ;; whitespace
 (use-package whitespace
   :ensure t
+  :defer t
   :delight
-  :init
-  (global-whitespace-mode 1)
+  :hook
+  (prog-mode . whitespace-mode)
+  :config
   (setq whitespace-style '(face           ; faceで可視化
-                           trailing       ; 行末
-                           ;; tabs           ; タブ
+                           ;; trailing       ; 行末
+                           tabs           ; タブ
                            spaces         ; スペース
                            empty          ; 先頭/末尾の空行
                            space-mark     ; 表示のマッピング
@@ -92,8 +94,6 @@
 
   ;; ;; 保存前に自動でクリーンアップ
   ;; (setq whitespace-action '(auto-cleanup))
-
-  (global-whitespace-mode 1)
 
   (defvar my/bg-color "powderblue")
   (set-face-attribute 'whitespace-trailing nil

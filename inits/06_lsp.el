@@ -1,32 +1,21 @@
-;; (use-package eglot
-;;   :ensure t
-;;   :hook
-;;   ((ruby-mode) . eglot-ensure)
-;;   ;; :init
-;;   ;; :config
-;;   ;; (defvar company-backends)
-;;   ;; (eglot--setq-saving company-backends '((company-capf
-;;   ;; 					  company-files)))
-;;   )
-
 (use-package lsp-mode
   :ensure t
   :hook
   ((ruby-mode) . lsp)
-  ;; (lsp-managed-mode . (lambda () (setq-local company-backends '((company-files company-dabbrev company-capf)))))
   :custom
   (lsp-auto-guess-root t)
   (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
+  (lsp-solargraph-use-bundler t)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
   (use-package lsp-ui
     :ensure t
     :hook (lsp-mode . lsp-ui-mode)
-      :bind
-      (:map lsp-mode-map
-	    ("C-q C-r" . lsp-ui-peek-find-references)
-	    ("C-q C-d" . lsp-ui-peek-find-definitions))
+    :bind
+    (:map lsp-mode-map
+          ("C-q C-r" . lsp-ui-peek-find-references)
+          ("C-q C-d" . lsp-ui-peek-find-definitions))
     :custom
     (lsp-ui-doc-enable nil)
     (lsp-ui-doc-header t)

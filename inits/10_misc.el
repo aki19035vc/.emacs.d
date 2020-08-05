@@ -19,6 +19,6 @@
 
 
 ;; ウィンドウを分割した時に自動でリサイズするよう設定
-;; (advice-add 'split-window-right :after 'balance-windows)
-;; (advice-add 'split-window-below :after 'balance-windows)
-;; (advice-add 'delete-window :after 'balance-windows)
+(advice-add 'split-window-right :after 'balance-windows)
+(advice-add 'split-window-below :after 'balance-windows)
+(advice-add 'delete-window :after 'balance-windows)

@@ -65,3 +65,37 @@
   :custom
   (beacon-color "magenta")
   :hook (after-init . beacon-mode))
+
+
+(use-package neotree
+  :ensure t
+  :defer t
+  :after
+  projectile
+  :custom
+  (neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (neo-show-hidden-files t)
+  :bind
+  (:map ctrl-l-map
+        ("n t" . neotree-projectile-toggle)
+        ("n f" . neotree-find)
+        ("n d" . neotree-dir))
+  :preface
+  (defun neotree-projectile-toggle ()
+    (interactive)
+    (let ((project-dir
+           (ignore-errors
+         ;;; Pick one: projectile or find-file-in-project
+             (projectile-project-root)
+             ))
+          (file-name (buffer-file-name))
+          (neo-smart-open t))
+      (if (and (fboundp 'neo-global--window-exists-p)
+               (neo-global--window-exists-p))
+          (neotree-hide)
+        (progn
+          (neotree-show)
+          (if project-dir
+              (neotree-dir project-dir))
+          (if file-name
+              (neotree-find file-name)))))))

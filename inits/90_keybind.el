@@ -10,7 +10,7 @@
  ([?¥] . [?\\])) ; ¥の代わりにバックスラッシュを入力する
 
 ;; ウィンドウ移動のキーバインドを設定
-(bind-keys*
+(bind-keys
  ("C-M-j" . windmove-left)
  ("C-M-l" . windmove-right)
  ("C-M-i" . windmove-up)
@@ -19,8 +19,9 @@
 
 ;; Ctrl-lマップ
 (bind-keys
- :prefix-map ctrl-l-map
- :prefix "C-l"
+ ;; :prefix-map ctrl-l-map
+ ;; :prefix "C-l"
+ :map ctrl-l-map
  ("0" . delete-window)
  ("1" . delete-other-windows)
  ("2" . split-window-below)
@@ -37,4 +38,6 @@
  ("C-w r" . winner-redo))
 
 ;; よくわからんやつを消す
-(define-key override-global-map (kbd "C-M-i") nil)
+;; (define-key override-global-map (kbd "C-u") nil)
+;; (bind-keys
+;;  ("C-u" . nil))

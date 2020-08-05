@@ -53,3 +53,7 @@
   (push '("*magit-diff*" :height 20) popwin:special-display-config)
   (push '(magit-status-mode :height 20) popwin:special-display-config)
   )
+
+;; C-l マップを定義
+(define-prefix-command 'ctrl-l-map)
+(global-set-key (kbd "C-l") 'ctrl-l-map)
