@@ -6,7 +6,7 @@
   (lsp-auto-guess-root t)
   (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
-  (lsp-solargraph-use-bundler t)
+  ;; (lsp-solargraph-use-bundler t)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
   (use-package lsp-ui

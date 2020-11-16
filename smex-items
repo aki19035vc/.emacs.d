@@ -1,84 +1,112 @@
 
 ;; ----- smex-history -----
 (
+ magit-blame
+ projectile-rails-find-current-model
+ projectile-rails-find-current-test
+ projectile-rails-find-current-view
  counsel-rg
- describe-variable
- neotree-toggle
- kill-buffer
- yank
- text-mode
- cua-mode
- describe-key
- neotree-dir
- magit-log-buffer-file
- neotree-find
- balance-windows-area
- neotree
- vue-mode
- balance-windows
  query-replace
+ balance-windows-area
+ wdired-change-to-wdired-mode
+ replace-regexp
+ cua-mode
+ projectile-rails-find-current-controller
+ lsp-ui-peek-find-definitions
+ projectile-rails-find-controller
+ projectile-replace
+ find-file
+ kill-buffer
+ vue-mode
+ projectile-rails-find-view
+ undo-tree-redo
+ winner-redo
+ markdown-mode
+ neotree-dir
  eval-buffer
  package-refresh-contents
- package-install
- mwim-beginning
- haml-mode
- yajade-newline-and-indent
- highlight-indent-guides-mode
- byte-compile-file
- package-list-packages
- jade-mode
- describe-mode
- list-packages
- beacon-mode
- company-diag
- xref-find-references
- xref-find-apropos
- counsel-ag
- cd
- 5x5
+ describe-key
+ magit-diff
+ describe-variable
+ magit-status
+ magit-log-buffer-file
+ winner-undo
+ neotree-toggle
+ projectile-rails-mode
+ counsel-imenu
+ imenu
+ counsel-semantic-or-imenu
 )
 
 ;; ----- smex-data -----
 (
- (counsel-rg . 44)
+ (counsel-rg . 173)
  (counsel-ag . 1)
  (eglot-shutdown . 16)
- (projectile-rails-find-controller . 2)
- (projectile-rails-find-model . 1)
+ (projectile-rails-find-controller . 14)
+ (projectile-rails-find-model . 2)
  (xref-find-references . 4)
  (xref-find-apropos . 2)
  (company-diag . 2)
- (describe-variable . 11)
- (eval-buffer . 13)
+ (describe-variable . 13)
+ (eval-buffer . 15)
  (beacon-mode . 3)
  (web-mode . 1)
  (package-install . 9)
  (list-packages . 1)
  (mmm-mode . 1)
- (kill-buffer . 15)
+ (kill-buffer . 25)
  (describe-mode . 1)
- (vue-mode . 18)
+ (vue-mode . 34)
  (package-list-packages . 2)
- (describe-key . 17)
+ (describe-key . 18)
  (jade-mode . 1)
  (byte-compile-file . 1)
  (highlight-indent-guides-mode . 4)
  (yajade-newline-and-indent . 1)
  (balance-windows . 6)
- (balance-windows-area . 8)
+ (balance-windows-area . 10)
  (haml-mode . 1)
- (lsp-ui-peek-find-references . 4)
- (lsp-ui-peek-find-definitions . 2)
+ (lsp-ui-peek-find-references . 21)
+ (lsp-ui-peek-find-definitions . 11)
  (mwim-beginning . 1)
- (package-refresh-contents . 4)
- (query-replace . 8)
+ (package-refresh-contents . 5)
+ (query-replace . 28)
  (neotree . 7)
- (neotree-dir . 4)
- (neotree-toggle . 18)
+ (neotree-dir . 5)
+ (neotree-toggle . 12)
  (neotree-find . 7)
- (magit-log-buffer-file . 3)
- (cua-mode . 8)
- (lsp-ui-doc-mode . 3)
- (text-mode . 1)
- (yank . 1)
+ (magit-log-buffer-file . 8)
+ (cua-mode . 28)
+ (lsp-ui-doc-mode . 9)
+ (lsp-toggle-symbol-highlight . 4)
+ (lsp-ui-imenu-mode . 2)
+ (ruby-mode . 1)
+ (lsp-ui-imenu . 4)
+ (counsel-imenu . 2)
+ (counsel-semantic-or-imenu . 1)
+ (imenu . 1)
+ (projectile-rails-mode . 2)
+ (projectile-rails-find-test . 2)
+ (projectile-rails-find-current-test . 6)
+ (projectile-rails-find-current-model . 5)
+ (projectile-rails-find-current-controller . 3)
+ (winner-undo . 1)
+ (lsp-find-definition . 2)
+ (lsp-find-references . 2)
+ (projectile-rails-goto-schema . 1)
+ (lsp-rename . 2)
+ (magit-blame . 46)
+ (projectile-rails-find-current-view . 5)
+ (wdired-change-to-wdired-mode . 6)
+ (magit-status . 1)
+ (magit-diff . 5)
+ (magit-diff:-C . 1)
+ (markdown-mode . 2)
+ (winner-redo . 2)
+ (undo-tree-redo . 3)
+ (projectile-rails-find-view . 1)
+ (projectile-replace . 5)
+ (find-file . 1)
+ (replace-regexp . 12)
 )

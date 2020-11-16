@@ -53,10 +53,10 @@
   (doom-modeline-minor-modes nil)
   :config
   (setq doom-modeline-height 1)
+  (column-number-mode t)
   (set-face-attribute 'mode-line nil :family "Source Code Pro" :height 130)
   (set-face-attribute 'mode-line-inactive nil :family "Source Code Pro" :height 130)
-  (line-number-mode 0)
-  (column-number-mode 0))
+  (line-number-mode 0))
 
 
 ;; カーソル行をびこーん

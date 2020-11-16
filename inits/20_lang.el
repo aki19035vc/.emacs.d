@@ -8,4 +8,9 @@
 (use-package projectile-rails
   :ensure t
   :defer t
-  :hook (ruby-mode . projectile-rails-mode))
+  :hook (ruby-mode . projectile-rails-mode)
+  :bind
+  (:map ctrl-l-map
+        ("r c" . projectile-rails-find-controller)
+        ("r m" . projectile-rails-model)
+        ("r t" . projectile-rails-test)))

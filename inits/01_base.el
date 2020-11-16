@@ -48,10 +48,10 @@
   (popwin:popup-window-position 'bottom)
   :config
   ;; magit
-  (push '("*magit-edit-log*" :height 20) popwin:special-display-config)
-  (push '("*magit-commit*" :height 20) popwin:special-display-config)
-  (push '("*magit-diff*" :height 20) popwin:special-display-config)
-  (push '(magit-status-mode :height 20) popwin:special-display-config)
+  ;; (push '("*magit-edit-log*" :height 20) popwin:special-display-config)
+  ;; (push '("*magit-commit*" :height 20) popwin:special-display-config)
+  ;; (push '("*magit-diff*" :height 20) popwin:special-display-config)
+  ;; (push '(magit-status-mode :height 20) popwin:special-display-config)
   )
 
 ;; C-l マップを定義

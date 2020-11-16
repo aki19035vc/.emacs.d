@@ -1,11 +1,7 @@
-;; (use-package web-mode
-;;   :ensure t
-;;   :defer t
-;;   :config
-;;   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-;;   (add-to-list 'auto-mode-alist '("\\.haml\\'" . web-mode))
-;;   ;; (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
-;;   )
+(use-package web-mode
+  :ensure t
+  :defer t
+  :mode (("\\.erb\\'" . web-mode)))
 
 (use-package css-mode
   :ensure t
@@ -23,13 +19,17 @@
   :ensure t
   :defer t)
 
+(use-package js-mode
+  :defer t
+  :custom
+  (js-switch-indent-offset 2))
+
 ;; jade/pug
 ;; use-package使えなかった
 (require 'yajade-mode)
 (bind-keys :map yajade-mode-map
            ("C-j" . yajade-newline-and-indent)
-           ("C-8" . yajade-unindent)
-           ("C-9" . yajade-indent))
+           ("M-i" . yajade-unindent))
 (setq-default tab-width 2 indent-tabs-mode nil)
 
 ;; vue
