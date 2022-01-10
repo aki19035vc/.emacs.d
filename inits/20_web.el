@@ -1,6 +1,7 @@
 (use-package web-mode
   :ensure t
   :defer t
+  :custom (web-mode-markup-indent-offset 2)
   :mode (("\\.erb\\'" . web-mode)))
 
 (use-package css-mode
@@ -22,7 +23,8 @@
 (use-package js-mode
   :defer t
   :custom
-  (js-switch-indent-offset 2))
+  (js-switch-indent-offset 2)
+  (js-indent-level 2))
 
 ;; jade/pug
 ;; use-package使えなかった

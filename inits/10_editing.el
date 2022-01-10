@@ -2,8 +2,7 @@
   :ensure t
   :defer t
   :bind
-  (("M-@" . er/expand-region)
-   ("C-M-@" . er/contract-region)))
+  (("C-M-@" . er/expand-region)))
 
 (use-package smart-hungry-delete
   :ensure t

@@ -1,46 +1,46 @@
 
 ;; ----- smex-history -----
 (
- magit-blame
- projectile-rails-find-current-model
- projectile-rails-find-current-test
- projectile-rails-find-current-view
- counsel-rg
  query-replace
- balance-windows-area
+ list-faces-display
+ describe-face
+ counsel-rg
  wdired-change-to-wdired-mode
+ eval-buffer
+ set-variable
+ vue-mode
+ describe-variable
+ tab-bar-close-tab
+ tab-bar-move-tab
+ tab-bar-new-tab
+ tab-bar-mode
+ describe-key
+ er/expand-region
+ all-the-icons-install-fonts
+ magit-blame
+ balance-windows-area
  replace-regexp
  cua-mode
- projectile-rails-find-current-controller
- lsp-ui-peek-find-definitions
  projectile-rails-find-controller
  projectile-replace
  find-file
  kill-buffer
- vue-mode
- projectile-rails-find-view
  undo-tree-redo
  winner-redo
  markdown-mode
  neotree-dir
- eval-buffer
  package-refresh-contents
- describe-key
  magit-diff
- describe-variable
  magit-status
  magit-log-buffer-file
  winner-undo
  neotree-toggle
  projectile-rails-mode
- counsel-imenu
- imenu
- counsel-semantic-or-imenu
 )
 
 ;; ----- smex-data -----
 (
- (counsel-rg . 173)
+ (counsel-rg . 195)
  (counsel-ag . 1)
  (eglot-shutdown . 16)
  (projectile-rails-find-controller . 14)
@@ -48,8 +48,8 @@
  (xref-find-references . 4)
  (xref-find-apropos . 2)
  (company-diag . 2)
- (describe-variable . 13)
- (eval-buffer . 15)
+ (describe-variable . 15)
+ (eval-buffer . 19)
  (beacon-mode . 3)
  (web-mode . 1)
  (package-install . 9)
@@ -57,9 +57,9 @@
  (mmm-mode . 1)
  (kill-buffer . 25)
  (describe-mode . 1)
- (vue-mode . 34)
+ (vue-mode . 40)
  (package-list-packages . 2)
- (describe-key . 18)
+ (describe-key . 19)
  (jade-mode . 1)
  (byte-compile-file . 1)
  (highlight-indent-guides-mode . 4)
@@ -71,7 +71,7 @@
  (lsp-ui-peek-find-definitions . 11)
  (mwim-beginning . 1)
  (package-refresh-contents . 5)
- (query-replace . 28)
+ (query-replace . 35)
  (neotree . 7)
  (neotree-dir . 5)
  (neotree-toggle . 12)
@@ -98,7 +98,7 @@
  (lsp-rename . 2)
  (magit-blame . 46)
  (projectile-rails-find-current-view . 5)
- (wdired-change-to-wdired-mode . 6)
+ (wdired-change-to-wdired-mode . 15)
  (magit-status . 1)
  (magit-diff . 5)
  (magit-diff:-C . 1)
@@ -109,4 +109,14 @@
  (projectile-replace . 5)
  (find-file . 1)
  (replace-regexp . 12)
+ (all-the-icons-install-fonts . 1)
+ (er/expand-region . 2)
+ (tab-bar-mode . 1)
+ (tab-bar-new-tab . 1)
+ (tab-bar-move-tab . 2)
+ (tab-bar-close-tab . 1)
+ (set-variable . 3)
+ (lsp-restart-workspace . 1)
+ (describe-face . 1)
+ (list-faces-display . 1)
 )

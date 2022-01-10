@@ -5,6 +5,8 @@
   (ruby-align-chained-calls t)
   )
 
+(use-package go-mode :ensure t)
+
 (use-package projectile-rails
   :ensure t
   :defer t
