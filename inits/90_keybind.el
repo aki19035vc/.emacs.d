@@ -10,7 +10,7 @@
  ([?¥] . [?\\])) ; ¥の代わりにバックスラッシュを入力する
 
 ;; ウィンドウ移動のキーバインドを設定
-(bind-keys
+(bind-keys*
  ("C-M-j" . windmove-left)
  ("C-M-l" . windmove-right)
  ("C-M-i" . windmove-up)
@@ -36,8 +36,3 @@
  ("C-w m" . maximize-window)
  ("C-w u" . winner-undo)
  ("C-w r" . winner-redo))
-
-;; よくわからんやつを消す
-;; (define-key override-global-map (kbd "C-u") nil)
-;; (bind-keys
-;;  ("C-u" . nil))
