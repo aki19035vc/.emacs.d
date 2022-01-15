@@ -13,6 +13,8 @@
 ;; スクロールバー非表示
 (scroll-bar-mode 0)
 
+(tab-bar-mode t)
+
 ;; 折り返しの設定
 (setq-default truncate-lines t)
 (setq-default truncate-partial-width-windows t)

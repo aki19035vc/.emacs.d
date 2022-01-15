@@ -1,19 +1,20 @@
 
 ;; ----- smex-history -----
 (
- query-replace
- list-faces-display
- describe-face
  counsel-rg
- wdired-change-to-wdired-mode
  eval-buffer
- set-variable
- vue-mode
- describe-variable
+ magit-status
  tab-bar-close-tab
  tab-bar-move-tab
  tab-bar-new-tab
  tab-bar-mode
+ query-replace
+ list-faces-display
+ describe-face
+ wdired-change-to-wdired-mode
+ set-variable
+ vue-mode
+ describe-variable
  describe-key
  er/expand-region
  all-the-icons-install-fonts
@@ -31,7 +32,6 @@
  neotree-dir
  package-refresh-contents
  magit-diff
- magit-status
  magit-log-buffer-file
  winner-undo
  neotree-toggle
@@ -40,7 +40,7 @@
 
 ;; ----- smex-data -----
 (
- (counsel-rg . 195)
+ (counsel-rg . 196)
  (counsel-ag . 1)
  (eglot-shutdown . 16)
  (projectile-rails-find-controller . 14)
@@ -49,7 +49,7 @@
  (xref-find-apropos . 2)
  (company-diag . 2)
  (describe-variable . 15)
- (eval-buffer . 19)
+ (eval-buffer . 22)
  (beacon-mode . 3)
  (web-mode . 1)
  (package-install . 9)
@@ -99,7 +99,7 @@
  (magit-blame . 46)
  (projectile-rails-find-current-view . 5)
  (wdired-change-to-wdired-mode . 15)
- (magit-status . 1)
+ (magit-status . 2)
  (magit-diff . 5)
  (magit-diff:-C . 1)
  (markdown-mode . 2)
@@ -111,10 +111,10 @@
  (replace-regexp . 12)
  (all-the-icons-install-fonts . 1)
  (er/expand-region . 2)
- (tab-bar-mode . 1)
- (tab-bar-new-tab . 1)
- (tab-bar-move-tab . 2)
- (tab-bar-close-tab . 1)
+ (tab-bar-mode . 3)
+ (tab-bar-new-tab . 3)
+ (tab-bar-move-tab . 5)
+ (tab-bar-close-tab . 3)
  (set-variable . 3)
  (lsp-restart-workspace . 1)
  (describe-face . 1)

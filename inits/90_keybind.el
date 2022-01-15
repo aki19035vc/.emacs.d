@@ -16,7 +16,6 @@
  ("C-M-i" . windmove-up)
  ("C-M-k" . windmove-down))
 
-
 ;; Ctrl-lマップ
 (bind-keys
  ;; :prefix-map ctrl-l-map
@@ -35,4 +34,8 @@
  ;; window関連
  ("C-w m" . maximize-window)
  ("C-w u" . winner-undo)
- ("C-w r" . winner-redo))
+ ("C-w r" . winner-redo)
+ ;; tab-bar-mode
+ ("C-n" . tab-bar-move-tab)
+ ("C-t c" . tab-bar-new-tab)
+ ("C-t x" . tab-bar-close-tab))
