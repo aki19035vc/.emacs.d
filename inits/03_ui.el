@@ -20,11 +20,7 @@
 (setq-default truncate-partial-width-windows t)
 
 ;; 行番号表示
-(use-package linum
-  :init
-  (global-linum-mode t)
-  :custom
-  (linum-format "%5d "))
+(global-display-line-numbers-mode t)
 
 ;; 色んなアイコンを使えるようになる
 (use-package all-the-icons
