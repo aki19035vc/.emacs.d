@@ -2,6 +2,7 @@ share/*/*
 !.gitkeep
 .cache
 amx-items
+samx-items
 auto-save-list
 elpa
 recentf
