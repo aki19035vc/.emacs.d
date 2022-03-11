@@ -36,6 +36,6 @@
  ("C-w u" . winner-undo)
  ("C-w r" . winner-redo)
  ;; tab-bar-mode
- ("C-n" . tab-bar-move-tab)
+ ("C-n" . tab-bar-switch-to-next-tab)
  ("C-t c" . tab-bar-new-tab)
  ("C-t x" . tab-bar-close-tab))

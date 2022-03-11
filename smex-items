@@ -1,11 +1,12 @@
 
 ;; ----- smex-history -----
 (
- query-replace
  counsel-rg
+ query-replace
+ eval-buffer
+ describe-variable
  make-frame
  wdired-change-to-wdired-mode
- eval-buffer
  magit-status
  tab-bar-close-tab
  tab-bar-move-tab
@@ -15,7 +16,6 @@
  describe-face
  set-variable
  vue-mode
- describe-variable
  describe-key
  er/expand-region
  all-the-icons-install-fonts
@@ -40,7 +40,7 @@
 
 ;; ----- smex-data -----
 (
- (counsel-rg . 201)
+ (counsel-rg . 202)
  (counsel-ag . 1)
  (eglot-shutdown . 16)
  (projectile-rails-find-controller . 14)
@@ -48,8 +48,8 @@
  (xref-find-references . 4)
  (xref-find-apropos . 2)
  (company-diag . 2)
- (describe-variable . 15)
- (eval-buffer . 22)
+ (describe-variable . 16)
+ (eval-buffer . 25)
  (beacon-mode . 3)
  (web-mode . 1)
  (package-install . 9)
@@ -71,7 +71,7 @@
  (lsp-ui-peek-find-definitions . 11)
  (mwim-beginning . 1)
  (package-refresh-contents . 5)
- (query-replace . 37)
+ (query-replace . 41)
  (neotree . 7)
  (neotree-dir . 5)
  (neotree-toggle . 12)

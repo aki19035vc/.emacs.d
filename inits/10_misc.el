@@ -9,6 +9,7 @@
 (defun my/scroll-up-command()
   (interactive)
   (scroll-up-command (/ (window-height) 10)))
+
 (defun my/scroll-down-command()
   (interactive)
   (scroll-down-command (/ (window-height) 10)))
