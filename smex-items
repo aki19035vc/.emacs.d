@@ -1,17 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ query-replace
  counsel-rg
+ make-frame
+ wdired-change-to-wdired-mode
  eval-buffer
  magit-status
  tab-bar-close-tab
  tab-bar-move-tab
  tab-bar-new-tab
  tab-bar-mode
- query-replace
  list-faces-display
  describe-face
- wdired-change-to-wdired-mode
  set-variable
  vue-mode
  describe-variable
@@ -35,12 +36,11 @@
  magit-log-buffer-file
  winner-undo
  neotree-toggle
- projectile-rails-mode
 )
 
 ;; ----- smex-data -----
 (
- (counsel-rg . 196)
+ (counsel-rg . 201)
  (counsel-ag . 1)
  (eglot-shutdown . 16)
  (projectile-rails-find-controller . 14)
@@ -71,7 +71,7 @@
  (lsp-ui-peek-find-definitions . 11)
  (mwim-beginning . 1)
  (package-refresh-contents . 5)
- (query-replace . 35)
+ (query-replace . 37)
  (neotree . 7)
  (neotree-dir . 5)
  (neotree-toggle . 12)
@@ -98,7 +98,7 @@
  (lsp-rename . 2)
  (magit-blame . 46)
  (projectile-rails-find-current-view . 5)
- (wdired-change-to-wdired-mode . 15)
+ (wdired-change-to-wdired-mode . 35)
  (magit-status . 2)
  (magit-diff . 5)
  (magit-diff:-C . 1)
@@ -119,4 +119,5 @@
  (lsp-restart-workspace . 1)
  (describe-face . 1)
  (list-faces-display . 1)
+ (make-frame . 1)
 )

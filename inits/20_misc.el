@@ -1,3 +1,10 @@
+;; shell-script
+(use-package shell-mode
+  :defer t
+  :custom
+  (sh-basic-offset 2)
+  (sh-indentation 2))
+
 ;; org
 (use-package org-mode
   :defer t
