@@ -1,11 +1,18 @@
 (use-package ruby-mode
   :ensure t
+  :defer t
   :custom
   (ruby-insert-encoding-magic-comment nil) ; ruby-modeにおけるマジックコメントの自動挿入を抑制
   (ruby-align-chained-calls t)
   )
 
-(use-package go-mode :ensure t)
+(use-package rbs-mode
+  :ensure t
+  :defer t)
+
+(use-package go-mode
+  :ensure t
+  :defer t)
 
 (use-package projectile-rails
   :ensure t
