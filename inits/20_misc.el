@@ -34,15 +34,7 @@
   :defer t)
 
 ;; git
-(use-package gitconfig-mode
-  :ensure t
-  :defer t)
-
-(use-package gitignore-mode
-  :ensure t
-  :defer t)
-
-(use-package gitattributes-mode
+(use-package git-modes
   :ensure t
   :defer t)
 
