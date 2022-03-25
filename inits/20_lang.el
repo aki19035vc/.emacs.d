@@ -23,3 +23,11 @@
         ("r c" . projectile-rails-find-controller)
         ("r m" . projectile-rails-model)
         ("r t" . projectile-rails-test)))
+
+(use-package protobuf-mode
+  :ensure t
+  :defer t)
+
+(use-package scala-mode
+  :ensure t
+  :defer t)
