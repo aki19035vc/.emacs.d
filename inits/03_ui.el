@@ -73,6 +73,8 @@
   :custom
   (neo-theme (if (display-graphic-p) 'icons 'arrow))
   (neo-show-hidden-files t)
+  (neo-window-fixed-size nil)
+  (neo-window-width 40)
   :bind
   (:map ctrl-l-map
         ("n t" . neotree-projectile-toggle)
