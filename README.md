@@ -22,7 +22,7 @@
 - `solargraph`はRuby用のlanguage-serverです
 - rubocopでのコードチェックをしてくれるので便利
 - Gemfileに下記を追記し、`bundle install`しましょう
-- `gem 'solartraph'`
+- `gem install solargraph`
 
 #### javascript
 - 開発ディレクトリのeslintを使うためにeslint-cliをインストール
