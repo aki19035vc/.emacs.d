@@ -5,6 +5,11 @@
 - mac用のemacsです
 - 通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう
 
+### All the icons のインストール
+```
+M-x all-the-icons-install
+```
+
 ## その他必要なモノ
 ### font
 `brew cask install font-source-code-pro`
@@ -27,7 +32,6 @@
 #### javascript
 - 開発ディレクトリのeslintを使うためにeslint-cliをインストール
 - `yarn global add eslint-cli`
-
 
 ## Tips
 ### 検索
