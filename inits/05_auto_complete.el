@@ -17,8 +17,8 @@
   (company-dabbrev-char-regexp "\\(\\sw\\|\\s_\\|_\\|-\\)") ; -や_などを含む語句も補完
   :config
   ;; company-backendsは、本当に使いたいものの要素とは別に、リストの要素にcompany-capfを入れておかないとlspで上書きされる
-  (setq company-backends '((company-files company-dabbrev company-capf company-css)
-                           company-capf))
+  ;; (setq company-backends '((company-files company-dabbrev company-capf company-css)
+  ;;                          company-capf))
   (use-package company-posframe
     :ensure t
     :hook (company-mode . company-posframe-mode)

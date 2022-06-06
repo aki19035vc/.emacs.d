@@ -24,10 +24,12 @@ M-x all-the-icons-install
 
 ### language
 #### Ruby
-- `solargraph`はRuby用のlanguage-serverです
-- rubocopでのコードチェックをしてくれるので便利
-- Gemfileに下記を追記し、`bundle install`しましょう
-- `gem install solargraph`
+`solargraph`はRuby用のlanguage-serverです。
+現在は、グローバルにインストールして使用しています。
+```
+$ gem install solargraph
+$ solargraph config
+```
 
 #### javascript
 - 開発ディレクトリのeslintを使うためにeslint-cliをインストール
