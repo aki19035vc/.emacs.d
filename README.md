@@ -31,9 +31,42 @@ $ gem install solargraph
 $ solargraph config
 ```
 
-#### javascript
+#### JavaScript
 - 開発ディレクトリのeslintを使うためにeslint-cliをインストール
 - `yarn global add eslint-cli`
+
+#### Scala
+[coursier](https://get-coursier.io/docs/cli-installation) を使用してScalaの開発環境を整えます。
+※ Xcode及びCommandLineToolsのバージョンが足りない場合はアップデートしてください
+
+```
+$ brew install coursier
+$ cs setup
+```
+
+setup後、scalaのバージョンを指定してインストール&有効にすることができます。
+
+```
+# cs install scala:<version>
+$ cs install scala:2.13.8
+```
+
+同様にJVMもバージョン管理することができるようです。
+詳しくは公式ドキュメントを参照してください。
+
+下記でLanguageServerをインストールしてください。
+[Metals公式ドキュメント](https://scalameta.org/metals/docs/editors/emacs/)
+
+```
+$ cs install metals
+```
+
+プロジェクトを開いて`Import build`を選択後、プロジェクトのビルドに数分待ちます。
+ログは下記でリアルタイムに確認できます。
+
+```
+$ tail -f .metals/metals.log
+```
 
 ## Tips
 ### 検索

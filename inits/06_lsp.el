@@ -1,7 +1,8 @@
 (use-package lsp-mode
   :ensure t
   :hook
-  ((ruby-mode) . lsp)
+  (ruby-mode . lsp)
+  (scala-mode . lsp)
   :custom
   (lsp-auto-guess-root t)
   (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
@@ -15,7 +16,7 @@
     :bind
     (:map lsp-mode-map
           ("C-q C-r" . lsp-ui-peek-find-references)
-          ("C-q C-d" . lsp-ui-peek-find-definitions))
+          ("C-q C-d" . lsp-ui-doc-show))
     :custom
     (lsp-ui-doc-enable nil)
     (lsp-ui-doc-header t)
@@ -45,5 +46,12 @@
     )
 
   (use-package lsp-ivy
-    :ensure t)
-  )
+    :ensure t))
+
+(use-package lsp-metals
+  :ensure t
+  :custom
+  ;; (lsp-metals-java-home '("/usr/libexec/java_home -v 1.8"))
+  (lsp-metals-server-args '("-J-Dmetals.allow-multiline-string-formatting=off"))
+  :hook
+  (scala-mode . lsp))
