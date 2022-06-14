@@ -7,7 +7,6 @@
   (lsp-auto-guess-root t)
   (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
-  ;; (lsp-solargraph-use-bundler t)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
   (use-package lsp-ui
@@ -25,7 +24,7 @@
     (lsp-ui-doc-max-width 120)
     (lsp-ui-doc-max-height 30)
     (lsp-ui-doc-use-childframe t)
-    (lsp-ui-doc-use-webkit t)
+    ;; (lsp-ui-doc-use-webkit t)
     ;; lsp-ui-flycheck
     (lsp-ui-flycheck-enable nil)
     ;; lsp-ui-sideline
@@ -42,8 +41,7 @@
     (lsp-ui-peek-enable t)
     (lsp-ui-peek-peek-height 20)
     (lsp-ui-peek-list-width 50)
-    (lsp-ui-peek-fontify 'on-demand)
-    )
+    (lsp-ui-peek-fontify 'on-demand))
 
   (use-package lsp-ivy
     :ensure t))
@@ -51,7 +49,6 @@
 (use-package lsp-metals
   :ensure t
   :custom
-  ;; (lsp-metals-java-home '("/usr/libexec/java_home -v 1.8"))
   (lsp-metals-server-args '("-J-Dmetals.allow-multiline-string-formatting=off"))
   :hook
   (scala-mode . lsp))
