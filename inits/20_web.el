@@ -22,6 +22,8 @@
 
 (use-package js-mode
   :defer t
+  :mode
+  (("\\.json\\'" . js-mode))
   :custom
   (js-switch-indent-offset 2)
   (js-indent-level 2))
