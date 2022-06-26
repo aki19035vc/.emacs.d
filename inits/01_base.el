@@ -19,6 +19,7 @@
 
 ;; 自動バックアップを無効
 (setq make-backup-files nil)
+(setq create-lockfiles nil)
 (setq auto-save-default nil)
 
 ;; which-key

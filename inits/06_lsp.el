@@ -5,7 +5,7 @@
   (scala-mode . lsp)
   :custom
   (lsp-auto-guess-root t)
-  (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
+  ;; (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
@@ -15,6 +15,7 @@
     :bind
     (:map lsp-mode-map
           ("C-q C-r" . lsp-ui-peek-find-references)
+          ("C-q C-f" . lsp-ui-peek-find-definitions)
           ("C-q C-d" . lsp-ui-doc-show))
     :custom
     (lsp-ui-doc-enable nil)
