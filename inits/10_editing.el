@@ -34,3 +34,13 @@
   :ensure t
   :config
   (smart-jump-setup-default-registers))
+
+(use-package multiple-cursors
+  :ensure t
+  :defer t
+  :bind
+  (("C-M-." . mc/mark-next-like-this)
+   ("C-M-," . mc/mark-previous-like-this))
+  (:map ctrl-l-map
+        ("C-c" . mc/edit-lines)
+        ("C-." . mc/mark-all-like-this)))

@@ -2,10 +2,9 @@
   :ensure t
   :hook
   (ruby-mode . lsp)
-  (scala-mode . lsp)
   :custom
   (lsp-auto-guess-root t)
-  ;; (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
+  (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
@@ -46,10 +45,3 @@
 
   (use-package lsp-ivy
     :ensure t))
-
-(use-package lsp-metals
-  :ensure t
-  :custom
-  (lsp-metals-server-args '("-J-Dmetals.allow-multiline-string-formatting=off"))
-  :hook
-  (scala-mode . lsp))
