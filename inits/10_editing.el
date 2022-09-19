@@ -44,3 +44,7 @@
   (:map ctrl-l-map
         ("C-c" . mc/edit-lines)
         ("C-." . mc/mark-all-like-this)))
+
+(use-package string-inflection
+  :ensure t
+  :defer t)
