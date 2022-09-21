@@ -37,8 +37,9 @@
   :ensure t
   :defer t
   :delight
-  :commands (magit-status)
-  )
+  :commands (magit-status))
+
+(add-hook 'git-commit-mode-hook (lambda() (setq fill-column 200)))
 
 ;; popwin
 (use-package popwin
