@@ -31,3 +31,7 @@
 (use-package scala-mode
   :ensure t
   :defer t)
+
+(use-package typescript-mode
+  :ensure t
+  :defer t)
