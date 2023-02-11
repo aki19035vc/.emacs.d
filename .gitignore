@@ -12,3 +12,5 @@ custom.el
 .lsp-session-v1
 .tern-config
 smex-items
+.dap-breakpoints
+.mc-lists.el

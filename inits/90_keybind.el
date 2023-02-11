@@ -27,7 +27,7 @@
  ("3" . split-window-right)
  ("C-f" . counsel-find-file)
  ("C-b" . ivy-switch-buffer)
- ("C-r" . counsel-recentf)
+ ("C-r" . counsel-rg)
  ("C-s" . swiper)
  ("C-p" . counsel-projectile-find-file)
  ("C-m" . magit-status)
