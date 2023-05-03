@@ -15,6 +15,7 @@
     (:map lsp-mode-map
           ("C-q C-r" . lsp-ui-peek-find-references)
           ("C-q C-f" . lsp-ui-peek-find-definitions)
+          ("M-." . lsp-ui-peek-find-definitions)
           ("C-q C-d" . lsp-ui-doc-show))
     :custom
     (lsp-ui-doc-enable nil)

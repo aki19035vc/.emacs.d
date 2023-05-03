@@ -30,10 +30,10 @@
   :config
   (global-undo-tree-mode t))
 
-(use-package smart-jump
-  :ensure t
-  :config
-  (smart-jump-setup-default-registers))
+;; (use-package smart-jump
+;;   :ensure t
+;;   :config
+;;   (smart-jump-setup-default-registers))
 
 (use-package multiple-cursors
   :ensure t
