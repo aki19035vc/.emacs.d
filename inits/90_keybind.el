@@ -7,6 +7,7 @@
  ("C-h" . delete-backward-char) ; C-hをバックスペースに
  ("M-8" . switch-to-prev-buffer) ; バッファ移動
  ("M-9" . switch-to-next-buffer) ; バッファ移動
+ ("M-s" . save-buffer)
  ([?¥] . [?\\])) ; ¥の代わりにバックスラッシュを入力する
 
 ;; ウィンドウ移動のキーバインドを設定
