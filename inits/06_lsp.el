@@ -2,10 +2,16 @@
   :ensure t
   :hook
   (ruby-mode . lsp)
+  (python-mode . lsp)
   :custom
   (lsp-auto-guess-root t)
   (lsp-prefer-capf t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
   (lsp-response-timeout 10)
+  (lsp-client-packages '(lsp-solargraph lsp-pylsp))
+  ;; pylsp
+  (lsp-pylsp-plugins-flake8-enabled nil)
+  (lsp-pylsp-plugins-mccabe-enabled nil) ;; Disable cyclomatic complexity check
+  (lsp-pylsp-plugins-pydocstyle-enabled nil)
   :config
   (setq lsp-document-sync-method lsp--sync-incremental) ;; inclemental を指定してはいけない
   (use-package lsp-ui

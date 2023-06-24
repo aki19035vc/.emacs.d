@@ -37,6 +37,12 @@ $ gem install solargraph
 $ solargraph config
 ```
 
+#### Python
+
+```
+pip install 'python-lsp-server[all]'
+```
+
 #### JavaScript
 - 開発ディレクトリのeslintを使うためにeslint-cliをインストール
 - `yarn global add eslint-cli`
