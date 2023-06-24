@@ -22,6 +22,12 @@ M-x all-the-icons-install
 - とある方がmmm-modeに対応させたjade/pug-modeを開発していたので、使わせて頂いております
 - `git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github/yajade-mode`
 
+### digdag
+
+```
+git clone git@github.com:syohex/emacs-digdag-mode.git ~/.emacs.d/share/github/emacs-digdag-mode
+```
+
 ### language
 #### Ruby
 `solargraph`はRuby用のlanguage-serverです。

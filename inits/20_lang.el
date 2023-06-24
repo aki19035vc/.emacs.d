@@ -35,3 +35,8 @@
 (use-package typescript-mode
   :ensure t
   :defer t)
+
+;; see: https://github.com/syohex/emacs-digdag-mode
+(use-package yajade-mode
+  :defer t
+  :mode (("\\.dig\\'" . yajade-mode)))
