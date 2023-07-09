@@ -24,7 +24,9 @@
 
 (use-package yaml-mode
   :ensure t
-  :defer t)
+  :defer t
+  :mode
+  ("\\.yaml\\'" "\\.yml\\'" "\\.dig\\'"))
 
 (use-package git-modes
   :ensure t
