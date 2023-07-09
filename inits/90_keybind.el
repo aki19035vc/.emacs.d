@@ -32,6 +32,9 @@
  ("C-s" . swiper)
  ("C-p" . counsel-projectile-find-file)
  ("C-m" . magit-status)
+ ("C-u" . string-inflection-underscore)
+ ("C-l" . string-inflection-lower-camelcase)
+ ("C-i" . string-inflection-camelcase)
  ;; window関連
  ("C-w m" . maximize-window)
  ("C-w u" . winner-undo)
