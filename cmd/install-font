@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eu
+
+cd $(dirname $0)/../tmp
+
+# see: https://github.com/adobe-fonts/source-han-code-jp
+curl -fL "https://github.com/adobe-fonts/source-han-code-jp/archive/refs/tags/2.012R.tar.gz" | \
+  tar -zx && \
+  cp -r source-han-code-jp-2.012R/OTF ~/Library/Fonts/SourceHanCodeJP

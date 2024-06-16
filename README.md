@@ -1,91 +1,47 @@
-# README.md
-## Emacsのインストール
+# README
+
 ### Emacs Mac Port (EMP)
-- https://github.com/railwaycat/homebrew-emacsmacport
-- mac用のemacsです
-- 通常のemacsをインストールすると、日本語入力時に画面が常にフラッシュしてしまうため、EMPを入れましょう
 
-### All the icons のインストール
-```
-M-x all-the-icons-install
-```
+mac用のEmacs。通常のEmacsをインストールすると日本語入力時に画面が常にフラッシュしてしまう問題があるため、EMPを入れる。
 
-## その他必要なモノ
-### font
-`brew cask install font-source-code-pro`
+https://github.com/railwaycat/homebrew-emacsmacport
 
-### ripgrep(音速grep)
-`brew install ripgrep`
+### ripgrep
 
-### yajade
-- https://github.com/kuanyui/yajade-mode.el
-- とある方がmmm-modeに対応させたjade/pug-modeを開発していたので、使わせて頂いております
-- `git clone https://github.com/kuanyui/yajade-mode.el ~/.emacs.d/share/github/yajade-mode`
+`C-l C-r`にripgrepをバインドしているため、インストールしておく。
 
-### digdag
+https://github.com/BurntSushi/ripgrep
 
-```
-git clone git@github.com:syohex/emacs-digdag-mode.git ~/.emacs.d/share/github/emacs-digdag-mode
+```sh
+brew install ripgrep
 ```
 
-### language
-#### Ruby
-`solargraph`はRuby用のlanguage-serverです。
-現在は、グローバルにインストールして使用しています。
-```
-$ gem install solargraph
-$ solargraph config
-```
+### フォント
 
-#### Python
+Source Han Code JP というフォントを利用している。
 
-```
-pip install 'python-lsp-server[all]'
+https://github.com/adobe-fonts/source-han-code-jp
+
+下記を実行することで、フォントをインストールすることができる。
+
+```sh
+cmd/install-font
 ```
 
-#### JavaScript
-- 開発ディレクトリのeslintを使うためにeslint-cliをインストール
-- `yarn global add eslint-cli`
+### LSPモード
 
-#### Scala
-[coursier](https://get-coursier.io/docs/cli-installation) を使用してScalaの開発環境を整えます。
-※ Xcode及びCommandLineToolsのバージョンが足りない場合はアップデートしてください
+LSPサーバーはDockerで構築するようにしてある。
 
-```
-$ brew install coursier
-$ cs setup
-```
+下記を参照し、各プロジェクトごとにLSPサーバー用の設定ファイルとDockerイメージを作成すること。
 
-setup後、scalaのバージョンを指定してインストール&有効にすることができます。
+https://github.com/emacs-lsp/lsp-docker?tab=readme-ov-file#registering-a-language-server-using-a-persistent-configuration-file
+
+lsp-dockerの設定ファイルをGit管理しない場合は`~/.config/git/ignore`か`<PROJECT_ROOT>/.git/info/exclude`に下記を記載する。
 
 ```
-# cs install scala:<version>
-$ cs install scala:2.13.8
+.lsp-docker
 ```
 
-同様にJVMもバージョン管理することができるようです。
-詳しくは公式ドキュメントを参照してください。
+LSPモードを起動する際は `M-x lsp-docker-start` で手動で起動する形にしている。
 
-下記でLanguageServerをインストールしてください。
-[Metals公式ドキュメント](https://scalameta.org/metals/docs/editors/emacs/)
-
-```
-$ cs install metals
-```
-
-プロジェクトを開いて`Import build`を選択後、プロジェクトのビルドに数分待ちます。
-ログは下記でリアルタイムに確認できます。
-
-```
-$ tail -f .metals/metals.log
-```
-
-## Tips
-### 検索
-### magit
-- ファイル単位のコミット履歴: magit-log-buffer-file
-- ファイルの行単位のコミット履歴: magit-blame 
-
-### 矩形編集
-### 文字を大きくする
-C-x C-0 => + or - or 0
+ただし、そのプロジェクトを初めて開く際は `M-x lsp-workspace-folders-add` でプロジェクトルートを追加する必要がある。
