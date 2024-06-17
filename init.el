@@ -157,6 +157,8 @@
 
 (leaf magit
   :ensure t
+  :hook
+  (git-commit-mode-hook . (lambda() (setq fill-column 200)))
   :commands
   (magit-status))
 
