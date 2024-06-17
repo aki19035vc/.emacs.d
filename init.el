@@ -132,7 +132,9 @@
 (leaf whitespace
   :ensure t
   :hook
-  (prog-mode-hook . whitespace-mode)
+  ((prog-mode-hook
+    yaml-mode-hook
+    markdown-mode-hook) . whitespace-mode)
   :custom
   (whitespace-space-regexp . "\\(\u3000+\\)")
   (whitespace-style . '(face         ; faceで可視化
