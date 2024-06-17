@@ -286,6 +286,11 @@
 
 (leaf multiple-cursors :ensure t)
 
+(leaf exec-path-from-shell
+  :ensure t
+  :init
+  (exec-path-from-shell-initialize))
+
 (leaf which-key
   :ensure t
   :config
