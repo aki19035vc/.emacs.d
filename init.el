@@ -395,6 +395,9 @@
 (leaf lsp-mode
   :ensure t
   :require t
+  :hook
+  (ruby-mode-hook . lsp-deferred)
+  (python-mode-hook . lsp-deferred)
   :custom
   (lsp-auto-guess-root . t)
   (lsp-prefer-capf . t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
