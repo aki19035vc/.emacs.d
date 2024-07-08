@@ -258,6 +258,8 @@
 
 (leaf company
   :ensure t
+  :hook
+  (after-init-hook . global-company-mode)
   :bind
   (:company-active-map
    ("C-n" . company-select-next)
@@ -275,8 +277,6 @@
   :config
   ;; company-backendsは、本当に使いたいものの要素とは別に、リストの要素にcompany-capfを入れておかないとlspで上書きされる
   (setq company-backends '((company-capf company-files company-dabbrev company-css) company-capf)))
-
-(global-company-mode)
 
 ;; ======== Misc ========
 
