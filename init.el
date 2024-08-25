@@ -232,6 +232,14 @@
   (swiper-include-line-number-in-search . t)
   (swiper-action-recenter . t))
 
+;; ======== Dired ========
+
+(leaf ls-lisp
+  :require t
+  :custom
+  (ls-lisp-use-insert-directory-program . nil)
+  (ls-lisp-dirs-first . t))
+
 ;; ======== Neotree ========
 
 (leaf neotree
