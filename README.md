@@ -30,18 +30,8 @@ cmd/install-font
 
 ### LSPモード
 
-LSPサーバーはDockerで構築するようにしてある。
-
-下記を参照し、各プロジェクトごとにLSPサーバー用の設定ファイルとDockerイメージを作成すること。
-
-https://github.com/emacs-lsp/lsp-docker?tab=readme-ov-file#registering-a-language-server-using-a-persistent-configuration-file
-
-lsp-dockerの設定ファイルをGit管理しない場合は`~/.config/git/ignore`か`<PROJECT_ROOT>/.git/info/exclude`に下記を記載する。
+steepを使用する場合はプロジェクトルートに`.dir-local`を配置し、下記を追記すること。
 
 ```
-.lsp-docker
+((nil . ((lsp-steep-enable . t))))
 ```
-
-LSPモードを起動する際は `M-x lsp-docker-start` で手動で起動する形にしている。
-
-ただし、そのプロジェクトを初めて開く際は `M-x lsp-workspace-folders-add` でプロジェクトルートを追加する必要がある。
