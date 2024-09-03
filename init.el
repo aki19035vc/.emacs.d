@@ -407,16 +407,25 @@
   (ruby-mode-hook . lsp-deferred)
   (python-mode-hook . lsp-deferred)
   :custom
-  (lsp-auto-guess-root . t)
-  (lsp-prefer-capf . t) ;; companyのバックエンドをcapfで使う。company-lspは非推奨になった
+  (lsp-headerline-breadcrumb-enable-diagnostics . nil)
   (lsp-response-timeout . 10)
-  (lsp-client-packages . '(lsp-solargraph lsp-pylsp))
+  (lsp-client-packages . '(lsp-pylsp
+                           lsp-solargraph
+                           ;; lsp-steep
+                           ;; lsp-ruby-lsp
+                           ))
+  ;; solargraph
+  (lsp-solargraph-diagnostics . nil)
+  (lsp-solargraph-autoformat . nil)
+  (lsp-solargraph-formatting . nil)
   ;; pylsp
   (lsp-pylsp-plugins-flake8-enabled . nil)
   (lsp-pylsp-plugins-mccabe-enabled . nil) ;; Disable cyclomatic complexity check
   (lsp-pylsp-plugins-pydocstyle-enabled . nil)
   :config
-  (setq lsp-document-sync-method lsp--sync-incremental))
+  (setq lsp-document-sync-method lsp--sync-incremental)
+  :bind
+  ((:lsp-mode-map ("M-." . lsp-ui-peek-find-definitions))))
 
 (leaf lsp-ui
   :ensure t
@@ -424,44 +433,43 @@
   (lsp-mode-hook . lsp-ui-mode)
   :custom
   (lsp-ui-doc-enable . nil)
-  (lsp-ui-doc-header . t)
-  (lsp-ui-doc-include-signature . nil)
-  (lsp-ui-doc-position . 'at-point)
-  (lsp-ui-doc-max-width . 120)
-  (lsp-ui-doc-max-height . 30)
-  (lsp-ui-doc-use-childframe . t)
-  ;; (lsp-ui-doc-use-webkit t)
-  ;; lsp-ui-flycheck
+  (lsp-ui-doc-header . nil)
   (lsp-ui-flycheck-enable . nil)
-  ;; lsp-ui-sideline
   (lsp-ui-sideline-enable . nil)
-  (lsp-ui-sideline-ignore-duplicate . t)
-  (lsp-ui-sideline-show-symbol . t)
-  (lsp-ui-sideline-show-hover . t)
-  (lsp-ui-sideline-show-diagnostics . nil)
-  (lsp-ui-sideline-show-code-actions . t)
-  ;; ;; lsp-ui-imenu
   (lsp-ui-imenu-enable . t)
   (lsp-ui-imenu-kind-position . 'top)
-  ;; lsp-ui-peek
   (lsp-ui-peek-enable . t)
   (lsp-ui-peek-peek-height . 20)
   (lsp-ui-peek-list-width . 50)
-  (lsp-ui-peek-fontify . 'on-demand))
+  (lsp-ui-peek-fontify . 'on-demand)
+  :custom-face
+  (lsp-ui-peek-peek . '((t (:background "#292b2e"))))
+  (lsp-ui-peek-list . '((t (:background "#292b2e"))))
+  (lsp-ui-peek-header . '((t (:background "#292b2e" :foreground "#a45bad" :weight bold :box (:line-width -1 :color "#a45bad")))))
+  (lsp-ui-peek-footer . '((t (:background "#3b314d"))))
+  (lsp-ui-peek-filename . '((t (:foreground "#dc752f" :weight bold))))
+  (lsp-ui-peek-selection . '((t (:background "#444155"))))
+  (lsp-ui-peek-highlight . '((t (:background "#827591")))))
 
 (use-package lsp-ivy
   :ensure t)
 
-(leaf lsp-docker
-  :ensure t
-  :require t
-  :config
-  ;; 使用したいLSPクライアントに関するデフォルトの設定を定義しておく必要がある。
-  ;; 各ワークスペースごとのLSPクライアントはこの設定をコピーする形で作成され、LSPモードのセッションと紐づける実装になっているため。
-  (lsp-docker-init-clients
-   :path-mappings '()
-   :client-packages '(lsp-solargraph)
-   :client-configs '((:server-id ruby-ls :docker-server-id docker-ruby-ls :server-command "solargraph stdio"))))
+;; steepのクライアントは自前で登録。:add-on?を指定しないとsolargraphと同時に起動できないため。
+(require 'lsp-steep)
+
+(defcustom lsp-steep-enable nil
+  "Enable Steep."
+  :type 'boolean
+  :safe #'booleanp
+  :group 'lsp-steep)
+
+(lsp-register-client
+ (make-lsp-client
+  :add-on? t
+  :new-connection (lsp-stdio-connection #'lsp-steep--build-command)
+  :activation-fn (lambda (_file-name _mode) lsp-steep-enable)
+  :priority -3
+  :server-id 'steep-ls--self))
 
 ;; ======== Scroll ========
 
