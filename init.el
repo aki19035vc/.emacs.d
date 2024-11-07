@@ -527,6 +527,8 @@
   ("C-M-l" . windmove-right)
   ("C-M-i" . windmove-up)
   ("C-M-k" . windmove-down)
+  ("C-M-n" . tab-bar-switch-to-next-tab)
+  ("C-M-p" . tab-bar-switch-to-prev-tab)
   ([?¥] . [?\\]))
 
 ;; C-l マップを定義
