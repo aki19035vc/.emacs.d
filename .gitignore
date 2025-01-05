@@ -1,6 +1,8 @@
 /tmp/*
 !/tmp/.keep
 
+/tree-sitter/**/*
+
 .cache
 .DS_Store
 .dap-breakpoints

@@ -325,6 +325,29 @@
   :config
   (global-undo-tree-mode t))
 
+;; ======== Tree-sitter ========
+
+(leaf treesit
+  :custom
+  (treesit-font-lock-level . 4)
+  (treesit-language-source-alist . '((typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+                                     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")))
+  :config
+  (dolist (element treesit-language-source-alist)
+    (let* ((lang (car element)))
+      (if (treesit-language-available-p lang)
+          (message "tree-sistter: %s is already installed" lang)
+        (message "tree-sitter: %s is not installed" lang)
+        (treesit-install-language-grammar lang)))))
+
+(leaf tree-sitter
+  :ensure (t tree-sitter-langs)
+  :require tree-sitter-langs
+  :hook
+  (tree-sitter-after-on-hook . tree-sitter-hl-mode)
+  :config
+  (global-tree-sitter-mode))
+
 ;; ======== Language ========
 
 (leaf git-modes :ensure t)
@@ -374,7 +397,19 @@
   (js-switch-indent-offset . 2)
   (js-indent-level . 2))
 
-(leaf typescript-mode :ensure t)
+(leaf typescript-ts-mode
+  :mode
+  "\\.ts\\'"
+  :init
+  (tree-sitter-require 'typescript)
+  (add-to-list 'tree-sitter-major-mode-language-alist '(typescript-ts-mode . typescript)))
+
+(leaf tsx-ts-mode
+  :mode
+  "\\.tsx\\'"
+  :init
+  (tree-sitter-require 'tsx)
+  (add-to-list 'tree-sitter-major-mode-language-alist '(tsx-ts-mode . tsx)))
 
 ;; ======== Language: CSS ========
 
