@@ -342,11 +342,7 @@
 
 (leaf tree-sitter
   :ensure (t tree-sitter-langs)
-  :require tree-sitter-langs
-  :hook
-  (tree-sitter-after-on-hook . tree-sitter-hl-mode)
-  :config
-  (global-tree-sitter-mode))
+  :require tree-sitter-langs)
 
 ;; ======== Language ========
 
@@ -400,6 +396,8 @@
 (leaf typescript-ts-mode
   :mode
   "\\.ts\\'"
+  :hook
+  (typescript-ts-mode-hook . tree-sitter-hl-mode)
   :init
   (tree-sitter-require 'typescript)
   (add-to-list 'tree-sitter-major-mode-language-alist '(typescript-ts-mode . typescript)))
@@ -407,6 +405,8 @@
 (leaf tsx-ts-mode
   :mode
   "\\.tsx\\'"
+  :hook
+  (tsx-ts-mode-hook . tree-sitter-hl-mode)
   :init
   (tree-sitter-require 'tsx)
   (add-to-list 'tree-sitter-major-mode-language-alist '(tsx-ts-mode . tsx)))
